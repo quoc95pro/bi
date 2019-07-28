@@ -12,16 +12,25 @@ class LineChart extends React.Component {
             xaxis: {
               categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
             }
-          },
-          series: [{
-            name: 'series-1',
-            data: [30, 40, 45, 50, 49, 60, 70, 91]
-          }]
+          }
         }
       }
+       
       render() {
+        const getRandomInt = () => {
+          const min = Math.ceil(10);
+          const max = Math.floor(20);
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        console.log(getRandomInt());
+        
+       let series= [{
+          name: 'series-1',
+          data: [getRandomInt(), getRandomInt(), getRandomInt(), getRandomInt(), getRandomInt(), getRandomInt(), getRandomInt(), getRandomInt()]
+        }]
         return (
-          <Chart options={this.state.options} series={this.state.series} type={this.props.type} width={500} height={320} />
+          <Chart options={this.state.options} series={series} type={this.props.type}  />
         )
       }
 }

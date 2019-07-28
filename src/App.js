@@ -27,61 +27,69 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="container-fluid container-index">
-        <nav className="navbar navbar-expand-lg navbar-light bg-primary">
-          <a className="navbar-brand" href="#">Navbar w/ text</a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarText">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Features</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Pricing</a>
-              </li>
-            </ul>
-            <span className="navbar-text">
-              Navbar text with an inline element
-    </span>
-          </div>
-        </nav>
-        {/* <div style={{
+      <div>
+        <div>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">Main</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor02">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#0">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#0">Page 1</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#0">Page 2</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#0">Page 3</a>
+                </li>
+              </ul>
+
+            </div>
+          </nav>
+
+        </div>
+        <div className="container-fluid container-index contain-custom">
+          {/* <div style={{
           height: "100vh",
           width: "100vw"
         }}>
           <ChoroplethMapVN data={this.state.dataVN} />
         </div> */}
-        <div className='row'>
-          <div className='col-md-8'>
-            <div className='row'>
-              <div className='col-md-6'><LineChart type='line'></LineChart></div>
-              <div className='col-md-6'><LineChart type='bar'></LineChart></div>
+          <div className='row'>
+            <div className='col-md-8 col-8 col-lg-8'>
+              <div className='row'>
+                <div className='col-md-4 col-4 col-lg-4'><LineChart type='line'></LineChart></div>
+                <div className='col-md-4 col-4 col-lg-4'><LineChart type='line'></LineChart></div>
+                <div className='col-md-4 col-4 col-lg-4'><LineChart type='line'></LineChart></div>
+              </div>
+              <div className='row'>
+                <div className='col-md-6'><LineChart type='area'></LineChart></div>
+                <div className='col-md-6'><LineChart type='radar'></LineChart></div>
+              </div>
+              <div className='row'>
+                <div className='col-md-6'><LineChart type='line'></LineChart></div>
+                <div className='col-md-6'><LineChart type='heatmap'></LineChart></div>
+              </div>
             </div>
-            <div className='row'>
-              <div className='col-md-6'><LineChart type='area'></LineChart></div>
-              <div className='col-md-6'><LineChart type='line'></LineChart></div>
-            </div>
-            <div className='row'>
-              <div className='col-md-6'><LineChart type='line'></LineChart></div>
-              <div className='col-md-6'><LineChart type='heatmap'></LineChart></div>
+
+            <div className='col-md-4'>
+              <div style={{
+                height: "100%",
+                width: "100%"
+              }}>
+                <ChoroplethMapVN data={this.state.dataVN} />
+              </div>
             </div>
           </div>
 
-          <div className='col-md-4'>
-            <div style={{
-              height: "100%",
-              width: "100%"
-            }}>
-              <ChoroplethMapVN data={this.state.dataVN} />
-            </div>
-          </div>
         </div>
-
       </div>
     );
   }

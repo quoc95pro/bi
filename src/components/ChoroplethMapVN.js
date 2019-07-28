@@ -61,8 +61,8 @@ class ChoroplethMap extends Component {
             data: dataset,
             setProjection: function (element) {
                 var projection = d3.geo.mercator()
-                    .center([108.277199, 15.058324]) // always in [East Latitude, North Longitude]
-                    .scale(2000)
+                    .center([108.277180, 15.058314]) // always in [East Latitude, North Longitude]
+                    .scale(2700)
                     .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
 
                 var path = d3.geo.path().projection(projection);
@@ -73,7 +73,7 @@ class ChoroplethMap extends Component {
     render() {
         return (
             <div id="cloropleth_map" style={{
-                height: "100%",
+                height: "90%",
                 width: "100%",
             }}></div>
         );

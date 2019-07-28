@@ -31,3 +31,12 @@
     transform: rotate(360deg);
   }
 }
+
+.contain-custom{
+  margin-top: 100px;
+}
+
+.col-custom{
+  box-shadow: 0 0px 5px #4D4D4D;
+  background-color: #fff;
+}
